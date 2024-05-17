@@ -9,6 +9,11 @@ variable "ami_filter" {
   type        = string
 }
 
+variable "key_name" {
+  description = "Value of SSH key name"
+  type        = string
+}
+
 variable "resource_tags" {
   description = "Tags to set for all resources"
   type        = map(string)
@@ -20,13 +25,7 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "management_subnet" {
-  description = "Allow access from management subnet"
-  type        = list(string)
-  default     = []
-}
-
 variable "number_of_instances" {
-  description = "Desired Capacity of EC2 Mac1 instances in ASG"
+  description = "Desired Capacity of Linux instances in ASG"
   type        = number
 }

@@ -1,10 +1,10 @@
 
-resource "aws_autoscaling_group" "ios_autoscaling_group" {
+resource "aws_autoscaling_group" "linux_autoscaling_group" {
   name = "${local.prefix}_autoscaling_group"
 
   launch_template {
-    id      = aws_launch_template.ios_template.id
-    version = "$latest"
+    id      = aws_launch_template.linux_template.id
+    version = "$Latest"
   }
 
   desired_capacity = var.number_of_instances
