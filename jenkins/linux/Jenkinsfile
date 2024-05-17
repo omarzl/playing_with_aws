@@ -1,0 +1,7 @@
+
+node('ec2-linux-fleet') {
+    stage('Build') {
+        echo 'Building....'
+        sh 'uname'
+    }
+}
