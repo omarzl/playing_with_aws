@@ -8,4 +8,5 @@ module "linux_dh_infra" {
   vpc_id                  = var.vpc_id
   max_number_of_instances = var.max_number_of_instances
   key_name                = var.key_name
+  user_data               = filebase64("${path.module}/user-data.sh")
 }

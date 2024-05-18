@@ -29,6 +29,12 @@ variable "max_number_of_instances" {
   type        = number
 }
 
+variable "user_data" {
+  description = "User data base 64 string"
+  type        = string
+  default     = null
+}
+
 variable "resource_tags" {
   description = "Tags to set for all resources"
   type        = map(string)
