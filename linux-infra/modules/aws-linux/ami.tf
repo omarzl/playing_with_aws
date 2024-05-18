@@ -1,5 +1,5 @@
 
-data "aws_ami" "macos_ami" {
+data "aws_ami" "linux_ami" {
   most_recent = true
   owners      = ["amazon"]
 
