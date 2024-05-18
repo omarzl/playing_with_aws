@@ -1,9 +1,8 @@
 
 locals {
-  prefix = "linux"
 
   required_tags = {
-    team = "linux"
+    team = "iOS"
   }
 
   tags = merge(var.resource_tags, local.required_tags)

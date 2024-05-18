@@ -14,10 +14,9 @@ variable "key_name" {
   type        = string
 }
 
-variable "resource_tags" {
-  description = "Tags to set for all resources"
-  type        = map(string)
-  default     = {}
+variable "prefix" {
+  description = "Prefix for all resource names"
+  type        = string
 }
 
 variable "vpc_id" {
@@ -28,4 +27,10 @@ variable "vpc_id" {
 variable "max_number_of_instances" {
   description = "Desired Capacity of instances in ASG"
   type        = number
+}
+
+variable "resource_tags" {
+  description = "Tags to set for all resources"
+  type        = map(string)
+  default     = {}
 }

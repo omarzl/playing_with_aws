@@ -1,7 +1,7 @@
 
 
-resource "aws_security_group" "sg_linux" {
-  name        = "sg_linux"
+resource "aws_security_group" "main_sg" {
+  name        = "${var.prefix}_sg"
   description = "Allow Apple Desktop Traffic"
   vpc_id      = var.vpc_id
 
