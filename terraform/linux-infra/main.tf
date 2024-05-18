@@ -1,4 +1,4 @@
-module "linux-infra" {
+module "linux_infra" {
   source = "../modules/ec2-autoscaling-infra"
 
   instance_type           = "t2.micro"

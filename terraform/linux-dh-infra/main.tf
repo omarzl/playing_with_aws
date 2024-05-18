@@ -1,5 +1,5 @@
 
-module "linux-dh-infra" {
+module "linux_dh_infra" {
   source = "../modules/ec2-autoscaling-infra"
 
   instance_type           = "a1.medium"

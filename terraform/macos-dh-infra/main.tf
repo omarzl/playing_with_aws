@@ -1,5 +1,5 @@
 
-module "macos-dh-infra" {
+module "macos_dh_infra" {
   source = "../modules/ec2-autoscaling-infra"
 
   instance_type           = "mac2.metal"
