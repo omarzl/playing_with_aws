@@ -1,0 +1,3 @@
+vpc_id                  = "some_vpc_id"
+key_name                = "some_key_name"
+max_number_of_instances = 1
