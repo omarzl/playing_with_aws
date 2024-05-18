@@ -8,4 +8,8 @@ module "macos_dh_infra" {
   vpc_id                  = var.vpc_id
   max_number_of_instances = var.max_number_of_instances
   key_name                = var.key_name
+  dedicated_hosts = {
+    should_use  = true
+    host_family = "mac2"
+  }
 }

@@ -9,4 +9,8 @@ module "linux_dh_infra" {
   max_number_of_instances = var.max_number_of_instances
   key_name                = var.key_name
   user_data               = filebase64("${path.module}/user-data.sh")
+  dedicated_hosts = {
+    should_use  = true
+    host_family = "a1"
+  }
 }

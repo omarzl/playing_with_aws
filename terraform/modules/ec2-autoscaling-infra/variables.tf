@@ -29,6 +29,18 @@ variable "max_number_of_instances" {
   type        = number
 }
 
+variable "dedicated_hosts" {
+  description = "Determines if the infra should use Dedicated Hosts"
+  type = object({
+    should_use  = bool
+    host_family = string
+  })
+  default = {
+    should_use  = false
+    host_family = ""
+  }
+}
+
 variable "user_data" {
   description = "User data base 64 string"
   type        = string
