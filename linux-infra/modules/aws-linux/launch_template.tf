@@ -12,4 +12,6 @@ resource "aws_launch_template" "linux_template" {
   iam_instance_profile {
     name = "AmazonSSMRoleForInstancesQuickSetup"
   }
+
+  user_data = filebase64("${path.module}/user-data.sh")
 }
