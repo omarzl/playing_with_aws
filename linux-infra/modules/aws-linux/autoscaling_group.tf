@@ -1,6 +1,7 @@
 
 resource "aws_autoscaling_group" "linux_autoscaling_group" {
-  name = "${local.prefix}_autoscaling_group"
+  name                  = "${local.prefix}_autoscaling_group"
+  protect_from_scale_in = false
 
   launch_template {
     id      = aws_launch_template.linux_template.id

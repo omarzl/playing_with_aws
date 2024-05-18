@@ -10,7 +10,7 @@ resource "aws_launch_template" "linux_template" {
   vpc_security_group_ids = [aws_security_group.sg_linux.id]
 
   iam_instance_profile {
-    name = "AmazonSSMRoleForInstancesQuickSetup"
+    name = aws_iam_instance_profile.ssm_inst_profile.name
   }
 
   user_data = filebase64("${path.module}/user-data.sh")
