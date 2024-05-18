@@ -1,5 +1,0 @@
-
-module "ssm_inst_profile" {
-  source = "../../../modules/aws-ec2-ssm-iam"
-  prefix = "linux"
-}

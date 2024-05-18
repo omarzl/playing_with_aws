@@ -1,5 +1,5 @@
 module "linux-infra" {
-  source = "./modules/aws-linux"
+  source = "../modules/ec2-autoscaling-infra"
 
   instance_type       = "t2.micro"
   ami_filter          = "al2023-ami-2023.4.20240513.0-kernel-6.1-x86_64"
