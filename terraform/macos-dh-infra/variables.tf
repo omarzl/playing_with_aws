@@ -3,8 +3,12 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "number_of_instances" {
-  description = "Desired Capacity of EC2 Mac1 instances in ASG"
+variable "key_name" {
+  description = "Value of SSH key name"
+  type        = string
+}
+
+variable "max_number_of_instances" {
+  description = "Desired Capacity of MacOS instances in ASG"
   type        = number
-  default     = 0
 }
