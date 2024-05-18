@@ -25,7 +25,7 @@ variable "vpc_id" {
   type        = string
 }
 
-variable "number_of_instances" {
-  description = "Desired Capacity of Linux instances in ASG"
+variable "max_number_of_instances" {
+  description = "Desired Capacity of instances in ASG"
   type        = number
 }
