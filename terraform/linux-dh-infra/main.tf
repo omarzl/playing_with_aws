@@ -1,4 +1,7 @@
 
+# In this example we are not using user_data to install Java
+# instead we are using a custom AMI generated with Packer
+
 module "linux_dh_infra" {
   source = "../modules/ec2-autoscaling-infra"
 
@@ -8,7 +11,6 @@ module "linux_dh_infra" {
   vpc_id                  = var.vpc_id
   max_number_of_instances = var.max_number_of_instances
   key_name                = var.key_name
-  user_data               = filebase64("${path.module}/user-data.sh")
   dedicated_hosts = {
     should_use  = true
     host_family = "a1"
