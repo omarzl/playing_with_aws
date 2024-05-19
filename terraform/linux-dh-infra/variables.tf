@@ -12,3 +12,8 @@ variable "max_number_of_instances" {
   description = "Desired Capacity of Linux instances in ASG"
   type        = number
 }
+
+variable "ami_owner" {
+  description = "Value of account owner of the AMI"
+  type        = string
+}

@@ -9,6 +9,12 @@ variable "ami_filter" {
   type        = string
 }
 
+variable "ami_owner" {
+  description = "Value of account owner of the AMI"
+  type        = string
+  default     = "amazon"
+}
+
 variable "key_name" {
   description = "Value of SSH key name"
   type        = string
