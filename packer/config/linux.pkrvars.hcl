@@ -1,4 +1,4 @@
 ami_identifier = "linux"
-intance_type = "t2.micro"
-base_ami_name = "al2023-ami-2023.4.20240513.0-kernel-6.1-x86_64"
+intance_type = "a1.medium"
+base_ami_name = "amzn2-ami-kernel-5.10-hvm-2.0.20240521.0-arm64-gp2"
 script_path = "config/linux_setup.sh"
