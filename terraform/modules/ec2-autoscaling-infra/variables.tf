@@ -36,6 +36,12 @@ variable "subnet_id" {
   default     = null
 }
 
+variable "availability_zones" {
+  description = "The availability zones to be used"
+  type        = list(string)
+  default     = ["us-east-1a"]
+}
+
 variable "max_number_of_instances" {
   description = "Desired Capacity of instances in ASG"
   type        = number

@@ -7,8 +7,6 @@ resource "aws_launch_template" "main_template" {
   image_id      = data.aws_ami.main_ami.id
   key_name      = var.key_name
 
-  vpc_security_group_ids = [aws_security_group.main_sg.id]
-
   network_interfaces {
     associate_public_ip_address = var.associate_public_ip_address
     subnet_id                   = var.subnet_id

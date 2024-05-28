@@ -22,5 +22,5 @@ resource "aws_autoscaling_group" "main_autoscaling_group" {
     }
   }
 
-  availability_zones = ["us-east-1a"]
+  availability_zones = var.availability_zones
 }
