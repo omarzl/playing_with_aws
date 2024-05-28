@@ -9,6 +9,12 @@ resource "aws_launch_template" "main_template" {
 
   vpc_security_group_ids = [aws_security_group.main_sg.id]
 
+  network_interfaces {
+    associate_public_ip_address = var.associate_public_ip_address
+    subnet_id                   = var.subnet_id
+    security_groups             = [aws_security_group.main_sg.id]
+  }
+
   iam_instance_profile {
     name = aws_iam_instance_profile.ssm_inst_profile.name
   }

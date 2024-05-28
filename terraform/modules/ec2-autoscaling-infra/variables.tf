@@ -30,6 +30,12 @@ variable "vpc_id" {
   type        = string
 }
 
+variable "subnet_id" {
+  description = "The subnet id to be used"
+  type        = string
+  default     = null
+}
+
 variable "max_number_of_instances" {
   description = "Desired Capacity of instances in ASG"
   type        = number
@@ -57,4 +63,10 @@ variable "resource_tags" {
   description = "Tags to set for all resources"
   type        = map(string)
   default     = {}
+}
+
+variable "associate_public_ip_address" {
+  description = "If should associate public ip addresses"
+  type        = bool
+  default     = null
 }
