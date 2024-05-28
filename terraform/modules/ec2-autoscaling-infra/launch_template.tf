@@ -7,10 +7,15 @@ resource "aws_launch_template" "main_template" {
   image_id      = data.aws_ami.main_ami.id
   key_name      = var.key_name
 
-  network_interfaces {
-    associate_public_ip_address = var.associate_public_ip_address
-    subnet_id                   = var.subnet_id
-    security_groups             = [aws_security_group.main_sg.id]
+  vpc_security_group_ids = var.subnet_id == null ? [aws_security_group.main_sg.id] : []
+
+  dynamic "network_interfaces" {
+    for_each =  var.subnet_id == null ? [] : [var.subnet_id]
+    content {
+      associate_public_ip_address = var.associate_public_ip_address
+      subnet_id                   = network_interfaces.value
+      security_groups             = [aws_security_group.main_sg.id]
+    }
   }
 
   iam_instance_profile {
