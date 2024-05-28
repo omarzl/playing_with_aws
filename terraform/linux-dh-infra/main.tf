@@ -11,6 +11,7 @@ module "linux_dh_infra" {
   prefix                      = "linux_dh"
   vpc_id                      = var.vpc_id
   subnet_id                   = var.subnet_id
+  availability_zones          = ["us-east-1b"] # a1.medium instances aren't available in us-east-1a
   associate_public_ip_address = true
   max_number_of_instances     = var.max_number_of_instances
   key_name                    = var.key_name
