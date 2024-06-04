@@ -1,9 +1,8 @@
 
-node('mac-local') {
-    
-    def REPO_URL
-    def ENV_FILE
+def REPO_URL
+def ENV_FILE
 
+node('mac-local') {
     stage('Clone') {
         // sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
         REPO_URL="${env.WORKSPACE}/playing-with-aws"
