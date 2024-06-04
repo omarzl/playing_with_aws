@@ -1,10 +1,10 @@
 
 node('mac-local') {
-    stage('Initial setup') {
-        sh env.WORKSPACE
+    stage('Clone') {
+        sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
     }
 
     stage('Clean up') {
-        cleanWs()
+        // cleanWs()
     }
 }
