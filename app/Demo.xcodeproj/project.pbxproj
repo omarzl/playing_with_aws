@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80603A872C0F867D00401B45 /* DynamicLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80603A812C0F867D00401B45 /* DynamicLib.framework */; };
+		80603A882C0F867D00401B45 /* DynamicLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80603A812C0F867D00401B45 /* DynamicLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80603A8E2C0F86E000401B45 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80603A8D2C0F86E000401B45 /* Hello.swift */; };
 		80A4E7B72C0D60DF00721FB1 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4E7B62C0D60DF00721FB1 /* DemoApp.swift */; };
 		80A4E7B92C0D60DF00721FB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4E7B82C0D60DF00721FB1 /* ContentView.swift */; };
 		80A4E7C82C0D60E200721FB1 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4E7C72C0D60E200721FB1 /* DemoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		80603A852C0F867D00401B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80A4E7AB2C0D60DF00721FB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80603A802C0F867D00401B45;
+			remoteInfo = DynamicLib;
+		};
 		80A4E7C42C0D60E200721FB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 80A4E7AB2C0D60DF00721FB1 /* Project object */;
@@ -22,7 +32,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		80603A892C0F867D00401B45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				80603A882C0F867D00401B45 /* DynamicLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		80603A812C0F867D00401B45 /* DynamicLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80603A8D2C0F86E000401B45 /* Hello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hello.swift; path = DynamicFramework/Hello.swift; sourceTree = SOURCE_ROOT; };
 		80A4E7B32C0D60DF00721FB1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A4E7B62C0D60DF00721FB1 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		80A4E7B82C0D60DF00721FB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,10 +58,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		80603A7E2C0F867D00401B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80A4E7B02C0D60DF00721FB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80603A872C0F867D00401B45 /* DynamicLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,11 +83,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80603A822C0F867D00401B45 /* DynamicLib */ = {
+			isa = PBXGroup;
+			children = (
+				80603A8D2C0F86E000401B45 /* Hello.swift */,
+			);
+			path = DynamicLib;
+			sourceTree = "<group>";
+		};
 		80A4E7AA2C0D60DF00721FB1 = {
 			isa = PBXGroup;
 			children = (
 				80A4E7B52C0D60DF00721FB1 /* Demo */,
 				80A4E7C62C0D60E200721FB1 /* DemoTests */,
+				80603A822C0F867D00401B45 /* DynamicLib */,
 				80A4E7B42C0D60DF00721FB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +106,7 @@
 			children = (
 				80A4E7B32C0D60DF00721FB1 /* Demo.app */,
 				80A4E7C32C0D60E200721FB1 /* DemoTests.xctest */,
+				80603A812C0F867D00401B45 /* DynamicLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +131,35 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		80603A7C2C0F867D00401B45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		80603A802C0F867D00401B45 /* DynamicLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80603A8C2C0F867D00401B45 /* Build configuration list for PBXNativeTarget "DynamicLib" */;
+			buildPhases = (
+				80603A7C2C0F867D00401B45 /* Headers */,
+				80603A7D2C0F867D00401B45 /* Sources */,
+				80603A7E2C0F867D00401B45 /* Frameworks */,
+				80603A7F2C0F867D00401B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicLib;
+			productName = DynamicLib;
+			productReference = 80603A812C0F867D00401B45 /* DynamicLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		80A4E7B22C0D60DF00721FB1 /* Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80A4E7D72C0D60E200721FB1 /* Build configuration list for PBXNativeTarget "Demo" */;
@@ -95,10 +167,12 @@
 				80A4E7AF2C0D60DF00721FB1 /* Sources */,
 				80A4E7B02C0D60DF00721FB1 /* Frameworks */,
 				80A4E7B12C0D60DF00721FB1 /* Resources */,
+				80603A892C0F867D00401B45 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				80603A862C0F867D00401B45 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -133,6 +207,10 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					80603A802C0F867D00401B45 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
 					80A4E7B22C0D60DF00721FB1 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -156,11 +234,19 @@
 			targets = (
 				80A4E7B22C0D60DF00721FB1 /* Demo */,
 				80A4E7C22C0D60E200721FB1 /* DemoTests */,
+				80603A802C0F867D00401B45 /* DynamicLib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		80603A7F2C0F867D00401B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80A4E7B12C0D60DF00721FB1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +264,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		80603A7D2C0F867D00401B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80603A8E2C0F86E000401B45 /* Hello.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80A4E7AF2C0D60DF00721FB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +292,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		80603A862C0F867D00401B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80603A802C0F867D00401B45 /* DynamicLib */;
+			targetProxy = 80603A852C0F867D00401B45 /* PBXContainerItemProxy */;
+		};
 		80A4E7C52C0D60E200721FB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 80A4E7B22C0D60DF00721FB1 /* Demo */;
@@ -206,6 +305,75 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		80603A8A2C0F867D00401B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7CEG7XS8U4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarzl.DynamicLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80603A8B2C0F867D00401B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7CEG7XS8U4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarzl.DynamicLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		80A4E7D52C0D60E200721FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,6 +496,7 @@
 		80A4E7D82C0D60E200721FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +526,7 @@
 		80A4E7D92C0D60E200721FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +592,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		80603A8C2C0F867D00401B45 /* Build configuration list for PBXNativeTarget "DynamicLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80603A8A2C0F867D00401B45 /* Debug */,
+				80603A8B2C0F867D00401B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		80A4E7AE2C0D60DF00721FB1 /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
