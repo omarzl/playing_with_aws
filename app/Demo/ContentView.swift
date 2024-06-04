@@ -6,8 +6,14 @@
 //
 
 import SwiftUI
+import DynamicLib
 
 struct ContentView: View {
+
+    init() {
+        _ = Hello()
+    }
+
     var body: some View {
         VStack {
             Image(systemName: "globe")

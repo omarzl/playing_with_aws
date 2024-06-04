@@ -3,6 +3,7 @@ load(
   "@build_bazel_rules_apple//apple:ios.bzl",
   "ios_application",
   "ios_unit_test",
+  "ios_framework",
 )
 load(
     "@rules_xcodeproj//xcodeproj:defs.bzl",
@@ -11,9 +12,25 @@ load(
 )
 
 swift_library(
+    name = "DynamicLib",
+    srcs = glob(["DynamicFramework/*.swift"]),
+    module_name = "DynamicLib",
+)
+
+ios_framework(
+    name = "DynamicFramework",
+    families = ["iphone"],
+    bundle_id = "com.omarzl.DynamicFramework",
+    minimum_os_version = "15.0",
+    infoplists = ["DynamicFramework/Info.plist"],
+    deps = [":DynamicLib"],
+)
+
+swift_library(
     name = "Sources",
     srcs = glob(["Demo/*.swift"]),
     module_name = "Demo",
+    deps = [":DynamicLib"],
 )
 
 swift_library(
@@ -40,6 +57,7 @@ ios_application(
     minimum_os_version = "15.0",
     visibility = ["//visibility:public"],
     deps = [":Sources"],
+    frameworks = [":DynamicFramework"],
 )
 
 xcodeproj(
