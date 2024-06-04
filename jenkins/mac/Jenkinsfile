@@ -1,0 +1,7 @@
+
+node('mac-local') {
+    stage('Build') {
+        echo 'Building....'
+        sh 'uname'
+    }
+}
