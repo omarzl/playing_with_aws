@@ -3,6 +3,11 @@ variable "vpc_id" {
   type        = string
 }
 
+variable "subnet_id" {
+  description = "The subnet id to be used"
+  type        = string
+}
+
 variable "key_name" {
   description = "Value of SSH key name"
   type        = string
