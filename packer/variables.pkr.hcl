@@ -1,16 +1,16 @@
 
 variable "ami_identifier" {
-  type    = string
+  type = string
 }
 
 variable "intance_type" {
-  type    = string
+  type = string
 }
 
 variable "base_ami_name" {
-  type    = string
+  type = string
 }
 
 variable "script_path" {
-  type    = string
+  type = string
 }
