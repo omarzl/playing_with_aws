@@ -24,4 +24,3 @@ xcode-select -p
 sudo xcodebuild -license accept
 xcodebuild -runFirstLaunch
 xcodebuild -downloadPlatform iOS
-
