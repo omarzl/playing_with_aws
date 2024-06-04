@@ -1,7 +1,6 @@
 node('mac-local') {
     
     REPO_URL="${env.WORKSPACE}/playing-with-aws"
-    ENV_FILE="${env.WORKSPACE}/demo.env"
 
     stage('Clone') {
         // sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
@@ -9,6 +8,22 @@ node('mac-local') {
 
     stage('Setup') {
         sh "$REPO_URL/jenkins/mac/setup.sh"
+    }
+
+    stage('Test wit Bazel') {
+        sh "$REPO_URL/jenkins/mac/test_with_bazel.sh"
+    }
+
+    stage('Create simulator') {
+        sh "$REPO_URL/jenkins/mac/create_sim.sh"
+    }
+
+    stage('Test wit Xcode') {
+        sh "$REPO_URL/jenkins/mac/test_with_xcode.sh"
+    }
+
+    stage('Delete simulator') {
+        sh "$REPO_URL/jenkins/mac/delete_sim.sh"
     }
 
     stage('Clean up') {

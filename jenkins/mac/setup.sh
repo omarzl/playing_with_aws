@@ -1,3 +1,5 @@
 #!/bin/zsh
 
-echo $ENV_FILE
+touch demo.env
+
+echo "REPO_URL=playing-with-aws" >> demo.env
