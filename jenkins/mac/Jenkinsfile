@@ -3,7 +3,7 @@ node('mac-local') {
     REPO_URL="${env.WORKSPACE}/playing-with-aws"
 
     stage('Clone') {
-        // sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
+        sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
     }
 
     stage('Setup') {
@@ -27,6 +27,6 @@ node('mac-local') {
     }
 
     stage('Clean up') {
-        // cleanWs()
+        cleanWs()
     }
 }
