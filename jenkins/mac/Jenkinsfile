@@ -1,7 +1,10 @@
 
 node('mac-local') {
-    stage('Build') {
-        echo 'Building....'
-        sh 'uname'
+    stage('Initial setup') {
+        sh env.WORKSPACE
+    }
+
+    stage('Clean up') {
+        cleanWs()
     }
 }
