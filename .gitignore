@@ -34,3 +34,6 @@ override.tf.json
 terraform.rc
 
 scripts.txt
+
+# Bazel
+/bazel-*
