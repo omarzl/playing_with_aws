@@ -1,7 +1,13 @@
 
 node('mac-local') {
     stage('Clone') {
-        sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
+        // sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
+        REPO_URL="${env.WORKSPACE}/playing-with-aws"
+    }
+
+    stage('Setup') {
+        ENV_FILE="${env.WORKSPACE}/demo.env"
+        sh "$REPO_URL/jenkins/mac/setup.sh"
     }
 
     stage('Clean up') {
