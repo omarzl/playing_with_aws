@@ -85,4 +85,9 @@ build {
   provisioner "shell" {
     script = var.script_path
   }
+
+  provisioner "breakpoint" {
+    disable = false
+    note    = "continue when you are ready"
+  }
 }
