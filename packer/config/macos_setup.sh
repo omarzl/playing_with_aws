@@ -12,10 +12,10 @@ xcode_version=15.4.0
 # Xcode installation
 export FASTLANE_SESSION
 xcodes install \
-$xcode_version \
---experimental-unxip \
---use-fastlane-auth \
---no-superuser
+    $xcode_version \
+    --experimental-unxip \
+    --use-fastlane-auth \
+    --no-superuser
 # Selects Xcode
 sudo xcode-select -s /Applications/Xcode-$xcode_version.app
 # Confirms Xcode selection
