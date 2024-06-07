@@ -14,3 +14,8 @@ variable "base_ami_name" {
 variable "script_path" {
   type = string
 }
+
+variable "FASTLANE_SESSION" {
+  type = string
+  sensitive = true
+}

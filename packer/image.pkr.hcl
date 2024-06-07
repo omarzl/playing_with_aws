@@ -82,6 +82,9 @@ build {
   sources = ["source.amazon-ebs.new_image"]
 
   provisioner "shell" {
+    environment_vars = [
+      "FASTLANE_SESSION=${var.FASTLANE_SESSION}"
+    ]
     script = var.script_path
   }
 

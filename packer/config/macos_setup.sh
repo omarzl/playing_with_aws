@@ -8,7 +8,7 @@
 xcode_version=15.4.0
 # Xcode installation
 export FASTLANE_SESSION
-xcodes install \
+/opt/homebrew/bin/xcodes install \
     $xcode_version \
     --experimental-unxip \
     --use-fastlane-auth \
@@ -32,4 +32,4 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshenv
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # xcbeautify installation
-brew install xcbeautify
+/opt/homebrew/bin/brew install xcbeautify
