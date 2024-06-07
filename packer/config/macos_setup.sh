@@ -1,12 +1,9 @@
 #!/bin/zsh
 
-# Homebrew installation
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 # Bazel installation
-brew install bazelisk
+/opt/homebrew/bin/brew install bazelisk
 # Xcodes tool installation
-brew install xcodesorg/made/xcodes
+/opt/homebrew/bin/brew install xcodesorg/made/xcodes
 
 xcode_version=15.4.0
 # Xcode installation
@@ -22,5 +19,17 @@ sudo xcode-select -s /Applications/Xcode-$xcode_version.app
 xcode-select -p
 # Initial setup
 sudo xcodebuild -license accept
-xcodebuild -runFirstLaunch
+sudo xcodebuild -runFirstLaunch
 xcodebuild -downloadPlatform iOS
+# Confirms runtime is installed
+xcrun simctl runtime list
+# Java installation
+/opt/homebrew/bin/brew install openjdk
+# Allows the plugin to find Java
+echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshenv
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshenv
+# Solves the error 'Host key verification failed' when cloning
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+# xcbeautify installation
+brew install xcbeautify
