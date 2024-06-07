@@ -2,28 +2,32 @@ node('ec2-dh-mac-fleet') {
     
     REPO_URL="${env.WORKSPACE}/playing_with_aws"
 
-    stage('Clone') {
-        sh "git clone https://github.com/omarzl/playing_with_aws.git"
-    }
+    try {
+        stage('Clone') {
+            sh "git clone https://github.com/omarzl/playing_with_aws.git"
+        }
 
-    stage('Setup') {
-        sh "$REPO_URL/jenkins/mac/setup.sh"
-    }
+        stage('Setup') {
+            sh "$REPO_URL/jenkins/mac/setup.sh"
+        }
 
-    stage('Test wit Bazel') {
-        sh "$REPO_URL/jenkins/mac/test_with_bazel.sh"
-    }
+        stage('Test wit Bazel') {
+            sh "$REPO_URL/jenkins/mac/test_with_bazel.sh"
+        }
 
-    stage('Create simulator') {
-        sh "$REPO_URL/jenkins/mac/create_sim.sh"
-    }
+        stage('Create simulator') {
+            sh "$REPO_URL/jenkins/mac/create_sim.sh"
+        }
 
-    stage('Test wit Xcode') {
-        sh "$REPO_URL/jenkins/mac/test_with_xcode.sh"
-    }
+        stage('Test wit Xcode') {
+            sh "$REPO_URL/jenkins/mac/test_with_xcode.sh"
+        }
 
-    stage('Delete simulator') {
-        sh "$REPO_URL/jenkins/mac/delete_sim.sh"
+        stage('Delete simulator') {
+            sh "$REPO_URL/jenkins/mac/delete_sim.sh"
+        }
+    }
+    catch (exc) {
     }
 
     stage('Clean up') {
