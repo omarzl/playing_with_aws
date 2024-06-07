@@ -2,4 +2,4 @@
 
 touch demo.env
 
-echo "REPO_URL=playing-with-aws" >> demo.env
+echo "REPO_URL=playing_with_aws" >> demo.env
