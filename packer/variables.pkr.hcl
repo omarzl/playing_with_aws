@@ -16,6 +16,6 @@ variable "script_path" {
 }
 
 variable "FASTLANE_SESSION" {
-  type = string
+  type      = string
   sensitive = true
 }
