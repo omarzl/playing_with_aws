@@ -3,7 +3,7 @@ node('ec2-dh-mac-fleet') {
     REPO_URL="${env.WORKSPACE}/playing-with-aws"
 
     stage('Clone') {
-        sh "git clone /Users/omarzl/Documents/aws/playing-with-aws"
+        sh "git clone git@github.com:omarzl/playing_with_aws.git"
     }
 
     stage('Setup') {
