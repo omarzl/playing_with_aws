@@ -88,6 +88,6 @@ build {
 
   provisioner "breakpoint" {
     disable = false
-    note    = "continue when you are ready"
+    note    = "when you are ready, continue to delete the instance and save the AMI"
   }
 }
