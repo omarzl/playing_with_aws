@@ -25,7 +25,6 @@ source "amazon-ebs" "new_image" {
   ssh_timeout   = "2h"
   tenancy       = "host"
   ebs_optimized = true
-  ssh_interface = "session_manager"
   aws_polling {
     delay_seconds = 60
     max_attempts  = 60
