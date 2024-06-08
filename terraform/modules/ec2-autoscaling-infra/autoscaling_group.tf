@@ -11,7 +11,6 @@ resource "aws_autoscaling_group" "main_autoscaling_group" {
   max_size = var.max_number_of_instances
   min_size = 0
   # The Jenkins plugin will update the desired capacity
-  desired_capacity = 0
 
   dynamic "tag" {
     for_each = local.tags
