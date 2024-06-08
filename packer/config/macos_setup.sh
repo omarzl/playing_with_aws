@@ -25,7 +25,8 @@ xcodebuild -downloadPlatform iOS
 xcrun simctl runtime list
 # Java installation
 /opt/homebrew/bin/brew install openjdk
-# Allows the Jenkins plugin to find Java and Homebrew
+# Allows the Jenkins plugin to find Java and Homebrew since it uses
+# a zsh non-login non-interactive shell
 echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshenv
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshenv
 # Solves the error 'Host key verification failed' when cloning Github repos
