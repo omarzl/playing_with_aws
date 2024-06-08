@@ -2,3 +2,4 @@ vpc_id                  = "some_vpc_id"
 subnet_id               = "some_subnet_id"
 key_name                = "some_key_name"
 max_number_of_instances = 1
+ami_owner               = ""
