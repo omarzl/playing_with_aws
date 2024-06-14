@@ -2,7 +2,8 @@
 
 This repository contains various playgrounds I use with AWS.
 
-## AWS Auto Scaling Infra with Jenkins
+### 1. Auto Scaling Infra with Jenkins
+------------
 
 I am an iOS developer, so my main focus is on macOS infrastructure. However, before using Mac instances, I opted to set up two Linux infrastructures, which are cheaper, before moving to Mac.
 
@@ -13,9 +14,11 @@ This repository offers three Auto Scaling Infrastructure setups:
 - Mac Dedicated Hosts Infra
 
 You should first read this article that explains how to set everything up.
+
 https://medium.com/@omarlagunas/ios-auto-scaling-infra-w-aws-jenkins-terraform-packer-and-bazel-4c189893b329
 
-### Linux Virtual instances Infra
+### 1.1 Linux Virtual instances Infra
+------------
 
 AWS offers `t2.micro` instances in their free tier.
 
@@ -36,7 +39,8 @@ The differences between the configuration of a macOS infra and this one are thes
 
 The label should be `ec2-linux-fleet` so the Jenkinsfile located in `jenkins/linux/Jenkinsfile` works out of the box.
 
-### Linux Dedicated Hosts Infra
+### 1.2 Linux Dedicated Hosts Infra
+------------
 
 I used `a1` host family and `a1.medium` instances.
 Similar to macOS instances, it is required to request a limit increase for these dedicated hosts to use them.
@@ -63,7 +67,8 @@ I used the same configuration as in `Linux Virtual instances Infra`
 
 The label should be `ec2-dh-linux-fleet` so the Jenkinsfile located in `jenkins/dh-linux/Jenkinsfile` works out of the box.
 
-### Mac Dedicated Hosts Infra
+### 1.3 Mac Dedicated Hosts Infra
+------------
 
 I used `mac2 ` host family and `mac2 .metal` instances.
 It is required to request a limit increase for these dedicated hosts to use them.
